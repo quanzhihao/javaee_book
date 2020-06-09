@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+http://www.mianfeimoban.com
+Name       : Graffiti
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20111223
+
+-->
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Graffitiby Free CSS Templates-www.mianfeimoban.com</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://fonts.googleapis.com/css?family=Ruthie" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="wrapper-bgtop">
+		<div id="wrapper-bgbtm">
+			<div id="header" class="container">
+				<div id="logo">
+					<h1><a href="#">Graffiti</a></h1>
+					<p>template design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></p>
+				</div>
+				<div id="menu">
+					<ul>
+						<li class="current_page_item"><a href="#">Homepage</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Photos</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end #header -->
+			<div id="page" class="container">
+				<div id="content">
+					<div class="post">
+						<div class="post-bgtop">
+							<div class="post-bgbtm">
+								<h2 class="title"><a href="#">Welcome to Graffiti</a></h2>
+								<p class="meta"><span class="date">December 28, 2011</span><span class="posted">Posted by <a href="#">Someone</a></span></p>
+								<div class="entry">
+									<p><body>
+    		  <div style="width:115px;padding:5px;float:left;background-color:#e9edf5;margin-right:1px">ISBN</div>
+		    <div style="width:125px;padding:5px;float:left;background-color:#e9edf5;margin-right:1px">书名</div>
+		    <div style="width:85px;padding:5px;float:left;background-color:#e9edf5;margin-right:1px">作者</div>
+		    <div style="width:105px;padding:5px;float:left;background-color:#e9edf5;margin-right:1px">出版社</div>
+		    <div style="width:45px;padding:5px;float:left;background-color:#e9edf5;margin-right:1px">价格</div>
+		    <div style="width:45px;padding:5px;float:left;background-color:#e9edf5;margin-right:1px">复本量</div>
+		    <div style="width:76px;padding:5px;float:left;background-color:#e9edf5;clean:left">库存量</div>
+		    <div style="padding:5px;line-height: 60px;">
+		      <s:iterator value="#request.list" id="book">
+		        <div style="float:left;width:126px;height:60px;overflow: hidden">${book.isbn}</div>
+		        <div style="float:left;width:136px;height:60px;overflow: hidden">${book.bookName}</div>
+		        <div style="float:left;width:96px;height:60px;overflow: hidden">${book.author}</div>
+		        <div style="float:left;width:116px;height:60px;overflow: hidden">${book.publisher}</div>
+		        <div style="float:left;width:56px;height:60px;overflow: hidden">${book.price}</div>
+		        <div style="float:left;width:56px;height:60px;overflow: hidden">${book.cnum}</div>
+		        <div style="float:left;width:76px;height:60px;overflow: hidden">${book.snum}</div>
+		      </s:iterator>
+		    </div>
+		  </div>
+		  <div style="background-color:#e9edf5;padding-left:5px;font-size:13px;line-height:24px; text-align:right; padding-right:10px">
+		    <s:set name="page" value="#request.page"/>
+		      <a href="start.html?pageNow=1&books=${request.books}" style="color:#000">首页</a>&nbsp;
+		      <s:if test="#page.hasPre">
+		        <a href="start.html?pageNow=${pageNow-1}&books=${request.books}" style="color:#000">上一页</a>&nbsp;
+		      </s:if>
+		      <s:else>
+		        <a href="start.html?pageNow=1&books=${request.books}" style="color:#000">上一页</a>&nbsp;
+		      </s:else>
+		      <s:if test="#page.hasNext">
+		        <a href="start.html?pageNow=${pageNow+1}&books=${request.books}" style="color:#000">下一页</a>&nbsp;
+		      </s:if>
+		      <s:else>
+		        <a href="start.html?pageNow=${page.totalPage}&books=${request.books}" style="color:#000">下一页</a>&nbsp;
+		      </s:else>
+		      <a href="start.html?pageNow=${page.totalPage}&books=${request.books}" style="color:#000">尾页</a>
+<!--  -->
+	
+    <!-- 页面尾部 -->
+									<p class="links">&nbsp;</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<div id="search" >
+								<form action="start.html" method="post">
+									<div>
+										<input type="text" name="books"  id="search-text" value="" />
+										<input type="submit" id="search-submit" value="GO" />
+									</div>
+                                    <div>${errors.book[0]}</div>
+								</form>
+							</div>
+							<div style="clear: both;">&nbsp;</div>
+						</li>
+						<li>
+							<h2>Aliquam tempus</h2>
+							<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
+						</li>
+						<li>
+							<h2>&nbsp;</h2>
+						</li>
+						<li> </li>
+						<li></li>
+					  <li></li>
+				  </ul>
+			  </div>
+				<!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+			</div>
+			<!-- end #page -->
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<p>Copyright (c) 2011 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.download from  <a href="http://www.mianfeimoban.com/">mianfeimoban.com</a></p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

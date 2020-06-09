@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+
+
+<struts>
+
+  <package name="default" extends="struts-default">
+  
+    <default-action-ref name="error"/>
+    <action name="error">
+        <result>/error.jsp</result>
+     </action>
+	<action name="index" class="js4129.action.Index">
+	  <result>/WEB-INF/page/login.jsp</result>
+	</action>
+	<action name="zhuce">
+	  <result>/WEB-INF/page/zhuce.jsp</result>
+	</action>
+	<action name="lend" class="js4129.action.BookAction">
+	  <result>/WEB-INF/page/lend.jsp</result>
+	</action>
+	<action name="reader" class="js4129.action.Reader">
+	  <result>/WEB-INF/page/reader.jsp</result>
+	</action>
+	<action name="user" class="js4129.action.UserAction">
+	  <result>/WEB-INF/page/user.jsp</result>
+	</action>
+	<action name="gooo" class="js4129.action.ReaderAction">
+	  <result>/success.jsp</result>
+	  <result name="input">/WEB-INF/page/infor.jsp</result>
+	</action>
+	<action name="selectBook" class="js4129.action.SearchAction">
+	  <result>/WEB-INF/page/lending.jsp</result>
+	  <result name="input">/WEB-INF/page/lend.jsp</result>
+	</action>
+	<action name="lendbook" class="js4129.action.LendAction">
+	  <result>/success.jsp</result>
+	</action>
+	<action name="returnbook" class="js4129.action.ReturnAction">
+	  <result>/success.jsp</result>
+	</action>
+	<action name="book" class="js4129.action.BookAction">
+	  <result>/WEB-INF/page/book.jsp</result>
+	  <result name="input">/WEB-INF/page/book.jsp</result>
+	</action>
+	<action name="getImage" class="js4129.action.BookAction" method="getResponse">
+	</action>
+	<action name="upload">
+	  <result>/WEB-INF/page/upload.jsp</result>
+	</action>
+	<action name="up" class="js4129.action.UploadAction">
+	  <result>/success.jsp</result>
+	</action>
+	<action name="logon" class="js4129.action.Logon">
+	  <result type="redirect">/index.html</result>
+	</action>
+	<action name="start" class="js4129.action.StartAction">
+	  <result>/WEB-INF/page/main.jsp</result>
+	</action>
+	<action name="main" class="js4129.action.LoginAction">
+	  <result>/WEB-INF/page/main.jsp</result>
+	  <result name="error">/success.jsp</result>
+	  <result name="input">/WEB-INF/page/login.jsp</result>
+	</action>
+	<action name="zzzc" class="js4129.action.ZhuCeAction">
+	  <result name="ok">/success.jsp</result>
+	  <result name="input">/WEB-INF/page/zhuce.jsp</result>
+	</action>
+	<action name="weiyue">
+	  <result>/weiyue.jsp</result>
+	</action>
+	<action name="download" class="js4129.action.DownAction">
+	  <param name="downloadFile">/images/违约情况说明书.rar</param>
+	  <result name="success" type="stream">
+	    <param name="inputName">targetFile</param>
+	    <param name="contentDisposition">
+	      filename="example.rar"
+	    </param>
+	    <param name="bufferSize">4096</param>
+	  </result>
+	</action>
+	
+  </package>
+  
+  <constant name="struts.il8n.encoding" value="UTF-8"/>
+  <constant name="struts.action.extension" value="html"/>
+  <constant name="struts.multipart.saveDir" value="/tmp"/>
+  <constant name="struts.enable.DynamicMethodInvocation" value="true"/>  
+  
+</struts>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="550,10" size="1260,2310">
+    <action name="error" location="65,57" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="index" location="65,162" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="zhuce" location="65,267" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="zhuce.jsp" />
+      </result>
+    </action>
+    <action name="lend" location="1045,267" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="lend.jsp" />
+      </result>
+    </action>
+    <action name="reader" location="1045,372" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="reader.jsp" />
+      </result>
+    </action>
+    <action name="user" location="1045,547" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="user.jsp" />
+      </result>
+    </action>
+    <action name="gooo" location="1045,712" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="infor.jsp" />
+      </result>
+    </action>
+    <action name="selectBook" location="1045,992" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="lending.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="lend.jsp" />
+      </result>
+    </action>
+    <action name="lendbook" location="1045,1107" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+    </action>
+    <action name="returnbook" location="1045,1212" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+    </action>
+    <action name="book" location="1045,1377" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="book.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="book.jsp" />
+      </result>
+    </action>
+    <action name="getImage" location="1045,1493" size="150,40" />
+    <action name="upload" location="1045,1597" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="upload.jsp" />
+      </result>
+    </action>
+    <action name="up" location="800,1597" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+    </action>
+    <action name="logon" location="800,2192" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="index.html" />
+      </result>
+    </action>
+    <action name="start" location="555,2192" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="main.jsp" />
+      </result>
+    </action>
+    <action name="main" location="310,2171" size="150,83">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="main.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="success.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="zzzc" location="65,2077" size="150,62">
+      <result name="ok">
+        <resourceEdge source="ok" routing="0" target="success.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="zhuce.jsp" />
+      </result>
+    </action>
+    <action name="weiyue" location="65,1982" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="weiyue.jsp" />
+      </result>
+    </action>
+    <action name="download" location="65,1877" size="150,41">
+      <result name="success" />
+    </action>
+  </package>
+  <webResource name="error.jsp" path="/error.jsp" location="395,30" size="150,55" />
+  <webResource name="login.jsp" path="/WEB-INF/page/login.jsp" location="10,135" size="150,55" />
+  <webResource name="zhuce.jsp" path="/WEB-INF/page/zhuce.jsp" location="255,240" size="150,55" />
+  <webResource name="lend.jsp" path="/WEB-INF/page/lend.jsp" location="2113,975" size="150,55" />
+  <webResource name="reader.jsp" path="/WEB-INF/page/reader.jsp" location="1862,345" size="150,55" />
+  <webResource name="user.jsp" path="/WEB-INF/page/user.jsp" location="1868,520" size="150,55" />
+  <webResource name="success.jsp" path="/success.jsp" location="393,1675" size="150,55" />
+  <webResource name="infor.jsp" path="/WEB-INF/page/infor.jsp" location="1865,695" size="150,55" />
+  <webResource name="lending.jsp" path="/WEB-INF/page/lending.jsp" location="1859,870" size="150,55" />
+  <webResource name="book.jsp" path="/WEB-INF/page/book.jsp" location="1868,1255" size="150,55" />
+  <webResource name="upload.jsp" path="/WEB-INF/page/upload.jsp" location="1862,1570" size="150,55" />
+  <webResource name="index.html" path="/index.html" location="1375,2375" size="150,55" />
+  <webResource name="main.jsp" path="/WEB-INF/page/main.jsp" location="853,2375" size="150,55" />
+  <webResource name="weiyue.jsp" path="/weiyue.jsp" location="395,1955" size="150,55" />
+</Struts2Diagram>
+
